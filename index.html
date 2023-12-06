@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc4</h1>
+    <h1>aoc5</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -25,9 +25,11 @@ function display(){
     len=Math.min(lines.length-1,10)
     for (i=0;i<len;i++){
         ct1.fillText(i+" - "+lines[i],5,40+20*i)
+        spl(i)
+        ct1.fillText(total, 500,30+20*i)
     }
 
-    spl(0)
+  
 }
 
 function spl(n){
@@ -38,11 +40,11 @@ function spl(n){
     alert("mynums="+mynums)
     winnums=nums[1].split(' ')
     alert("winnums="+winnums)
-
+count=0
     for (c=0; c<mynums.length;c++){
         if (mynums[c]!="" && winnums.includes(mynums[c])) {count++; alert("included "+mynums[c]+"  count="+count)}
     }
-    
+    if (count>1){total+=2**count}
 }
         
 </script>
