@@ -7,6 +7,7 @@ var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
 var i   
 var lines = [], mynums=[], winnums=[]
+    var total=0,count=0
     fileLoad();
     async function fileLoad() {
   try {
@@ -39,7 +40,7 @@ function spl(n){
     alert("winnums="+winnums)
 
     for (c=0; c<mynums.length;c++){
-        if (winnums.includes(mynums[c]) {alert("included "+mynums[c])}
+        if (winnums.includes(mynums[c]) {alert("included "+mynums[c]+"  count="+count)}
     }
     
 }
