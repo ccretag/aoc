@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aocTest3</h1>
+    <h1>aoc1</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -11,7 +11,7 @@ var lines = [], mynums=[], winnums=[]
     fileLoad();
     async function fileLoad() {
   try {
-    const response = await fetch('test.txt');
+    const response = await fetch('info.txt');
     const data = await response.text();
     lines = data.split('\n');
   } catch (error) {
