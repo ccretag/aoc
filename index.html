@@ -1,21 +1,26 @@
 <html>
 <body>
+    <canvas id="Canvas1" width="800" height="650">
 <script>
-
-var array = [];
+var c1 = document.getElementById("Canvas1");
+var ct1 = c1.getContext("2d");
+    
+var lines = [];
     fileLoad();
     async function fileLoad() {
   try {
     const response = await fetch('info.txt');
     const data = await response.text();
-    array = data.split('\n');
+    lines = data.split('\n');
   } catch (error) {
     alert('Error reading file:'+error);
   }
 
-alert(array)
  }
 
+    for (i=0;i<lines.length;i++){
+    ct1.fillText(lines[i],0,30+20*i)
+}
 </script>
 </body>
 </html>
