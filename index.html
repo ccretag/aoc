@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc7</h1>
+    <h1>aoc8</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -25,7 +25,17 @@ function display(){
     for (i=0;i<len;i++){
         ct1.fillText(i+" - "+lines[i],5,40+20*i)
     }
+
+    spl(0)
 }
+
+function spl(n){
+    var    nocolon=[], nums=[]
+        nocolon=lines[n].split(":")
+    nums=nocolon.split("|")
+    alert("mynums="+nums[0])
+}
+        
 </script>
 </body>
 </html>
