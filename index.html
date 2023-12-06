@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc8</h1>
+    <h1>aoc9</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -38,9 +38,9 @@ function spl(n){
         nocolon=lines[n].split(":")
     nums=nocolon[1].split("|")
     mynums=nums[0].split(' ')
-    alert("mynums="+mynums)
+//    alert("mynums="+mynums)
     winnums=nums[1].split(' ')
-    alert("winnums="+winnums)
+ //   alert("winnums="+winnums)
 count=0
     for (c=0; c<mynums.length;c++){
         if (mynums[c]!="" && winnums.includes(mynums[c])) {count++}
