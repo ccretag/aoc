@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc4</h1>
+    <h1>aoc5</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -16,12 +16,14 @@ var lines = [];
   } catch (error) {
     alert('Error reading file:'+error);
   }
-
+ display()
  }
-    
-ct1.fillText("Data read",0,20)
-for (i=0;i<lines.length;i++){
-    ct1.fillText(i+" - "+lines[i],5,40+20*i)
+
+function display(){   
+    ct1.fillText("Data read",0,20)
+    for (i=0;i<lines.length;i++){
+        ct1.fillText(i+" - "+lines[i],5,40+20*i)
+    }
 }
 </script>
 </body>
