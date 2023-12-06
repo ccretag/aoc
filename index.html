@@ -1,12 +1,12 @@
 <html>
 <body>
-    <h1>aoc8</h1>
+    <h1>aoc9</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
 var i   
-var lines = [];
+var lines = [], mynums, winnums
     fileLoad();
     async function fileLoad() {
   try {
@@ -34,6 +34,8 @@ function spl(n){
         nocolon=lines[n].split(":")
     nums=nocolon.split("|")
     alert("mynums="+nums[0])
+    winnums=nums[1]
+    alert("winnums="+winnums)
 }
         
 </script>
