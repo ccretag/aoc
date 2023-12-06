@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc7</h1>
+    <h1>aoc8</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -23,7 +23,7 @@ var lines = [], mynums=[], winnums=[]
 
 function display(){   
     ct1.fillText("Data lines="+lines.length,0,20)
-    len=Math.min(lines.length-1,10)
+    len=lines.length-1
     for (i=0;i<len;i++){
         ct1.fillText(i+" - "+lines[i],5,40+2*i)
         spl(i)
