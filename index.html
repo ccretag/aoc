@@ -21,7 +21,8 @@ var lines = [];
 
 function display(){   
     ct1.fillText("Data lines="+lines.length,0,20)
-    for (i=0;i<lines.length-1;i++){
+    len=Math.max(lines.length-1,10)
+    for (i=0;i<len;i++){
         ct1.fillText(i+" - "+lines[i],5,40+20*i)
     }
 }
