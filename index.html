@@ -1,12 +1,12 @@
 <html>
 <body>
-    <h1>aoc1</h1>
+    <h1>aoc2</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
 var i   
-var lines = [], mynums, winnums
+var lines = [], mynums=[], winnums=[]
     fileLoad();
     async function fileLoad() {
   try {
@@ -33,9 +33,15 @@ function spl(n){
     var    nocolon=[], nums=[]
         nocolon=lines[n].split(":")
     nums=nocolon[1].split("|")
-    alert("mynums="+nums[0])
-    winnums=nums[1]
+    mynums=nums[0].split(' ')
+    alert("mynums="+mynums)
+    winnums=nums[1].split(' ')
     alert("winnums="+winnums)
+
+    for (c=0; c<mynums.length;c++){
+        if (winnums.includes(mynums[c]) {alert("included "+mynums[c])}
+    }
+    
 }
         
 </script>
