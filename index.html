@@ -1,10 +1,11 @@
 <html>
 <body>
+    <p>aoc1</p>
     <canvas id="Canvas1" width="800" height="650">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
-    
+var i   
 var lines = [];
     fileLoad();
     async function fileLoad() {
@@ -17,9 +18,9 @@ var lines = [];
   }
 
  }
-
+ct1.fillText("Data read",0,20)
     for (i=0;i<lines.length;i++){
-    ct1.fillText(lines[i],0,30+20*i)
+    ct1.fillText(lines[i],5,40+20*i)
 }
 </script>
 </body>
