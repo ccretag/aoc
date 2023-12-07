@@ -6,12 +6,12 @@
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
 var i   
-var lines = [], mynums=[], winnums=[]
+var lines = [], rank=[], bet=[], hand=[]
     var total=0,count=0
     fileLoad();
     async function fileLoad() {
   try {
-    const response = await fetch('info.txt');
+    const response = await fetch('info7.txt');
     const data = await response.text();
     lines = data.split('\n');
   } catch (error) {
@@ -34,18 +34,13 @@ function display(){
 }
 
 function spl(n){
-    var    nocolon=[], nums=[]
-        nocolon=lines[n].split(":")
-    nums=nocolon[1].split("|")
-    mynums=nums[0].split(' ')
-//    alert("mynums="+mynums)
-    winnums=nums[1].split(' ')
- //   alert("winnums="+winnums)
-count=0
-    for (c=0; c<mynums.length;c++){
-        if (mynums[c]!="" && winnums.includes(mynums[c])) {count++}
-    }
-    if (count>0){total+=2**(count-1)}
+    var    nocolon=[]
+        nocolon=lines[n].split(" ")
+    
+    hand[n]=nocolon[0]
+    bet[n]=nocolon[1]
+    ct1.fillText(hand[n]+":"+bet[n], 400, 10+10*n)
+
 }
         
 </script>
