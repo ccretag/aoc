@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc1.9</h1>
+    <h1>aoc2</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -15,7 +15,7 @@ var total=0,count=0
   try {
     const response = await fetch('info13.txt');
     var data = await response.text();
-    data=data.replace('\n',"*")
+    data=data.replaceAll('\n',"*")
     lines = data.split('**');
   } catch (error) {
     alert('Error reading file:'+error);
