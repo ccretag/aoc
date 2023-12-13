@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc1.3</h1>
+    <h1>aoc1.4</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -24,10 +24,10 @@ var total=0,count=0
  }
 
 function display(){   
-    ct1.fillText("Data lines="+lines.length,0,20)
+    ct1.fillText("Data lines="+lines.length,0,10)
     len=lines.length-1
     for (i=0;i<len;i++){
-        ct1.fillText(i+" - "+lines[i],5,20+8*i)
+        ct1.fillText(i+" - "+lines[i],5,20+12*i)
         spl(i) 
     }
 
