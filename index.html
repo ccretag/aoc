@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc8.2</h1>
+    <h1>aoc1.2</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -13,7 +13,7 @@ var total=0,count=0
     fileLoad();
     async function fileLoad() {
   try {
-    const response = await fetch('info8.txt');
+    const response = await fetch('info13.txt');
     const data = await response.text();
     lines = data.split('\n');
   } catch (error) {
@@ -27,7 +27,7 @@ function display(){
     ct1.fillText("Data lines="+lines.length,0,20)
     len=lines.length-1
     for (i=0;i<len;i++){
-        ct1.fillText(i+" - "+lines[i],5,40+5*i)
+        ct1.fillText(i+" - "+lines[i],5,20+6*i)
         spl(i) 
     }
 
