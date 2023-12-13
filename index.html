@@ -7,8 +7,7 @@ var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
     var left=[], right=[]
 var i   
-var ins ="LRRLLRLRRRLRRRLRRLRRRLRRLRRRLRRLRRRLRLRRRLRRRLRRRLRLRRLRRRLRRRLRRLRRLRRLRLLLRRRLRRRLRLRLRRLLRRRLRRLRRRLRLRRLRRRLRRRLLRLRLLRRRLRRRLLRRRLRRRLRRRLRRLRRRLLLRRRLRLLLRLRLRLLRLRLLLRRLRRLLRRLRRRLRRLRRLRLRRLLRRLRLRRLLLRRRLLRRRLLRLRLLRRRLRLLRRLRLRRLRLRRRLLRRRLLRRLRLRRLRRLLRLRLRRRLRLRRRR"
-    
+ 
 var lines = []
 var total=0,count=0
     fileLoad();
@@ -28,7 +27,7 @@ function display(){
     ct1.fillText("Data lines="+lines.length,0,20)
     len=lines.length-1
     for (i=0;i<len;i++){
-        ct1.fillText(i+" - "+lines[i],5,40+2*i)
+        ct1.fillText(i+" - "+lines[i],5,40+3*i)
         spl(i) 
     }
 
@@ -36,13 +35,8 @@ function display(){
 }
 
 function spl(n){
-    var nocolon=[], lr=[]
-    nocolon=lines[n].split("(")
-    lr=nocolon[1].split(" ")
-    left[n]=lr[0]
-    right[n]=lr[1].slice(0,-1)
     
-    ct1.fillText(left[n]+" & "+right[n], 400, 10+10*n)
+    ct1.fillText(lines[n], 0, 10+4*n)
 
 }
         
