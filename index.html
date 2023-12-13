@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc1.7</h1>
+    <h1>aoc1.8</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -15,7 +15,8 @@ var total=0,count=0
   try {
     const response = await fetch('info13.txt');
     const data = await response.text();
-    lines = data.split('\n\n');
+    data=data.replace('\n'),"*"
+    lines = data.split('**');
   } catch (error) {
     alert('Error reading file:'+error);
   }
@@ -38,7 +39,7 @@ function display(){
 
 function spl(n){
    var grid=[],g
-    grid=lines[n].split('/n')
+    grid=lines[n].split('*')
     for(g=0;g<grid.length;g++){
      ct1.fillText(g+" ? "+grid[g], 3*n, 30+4*g+30*n)
     }
