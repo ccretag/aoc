@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc1.5</h1>
+    <h1>aoc1.6</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -39,7 +39,7 @@ function spl(n){
    var grid=[],g
     grid=lines[n].split('/n')
     for(g=0;g<grid.length;g++){
-     ct1.fillText(grid[g], 3*n, 10+4*g+30*n)
+     ct1.fillText(g+" ? "+grid[g], 3*n, 30+4*g+30*n)
     }
 
 }
