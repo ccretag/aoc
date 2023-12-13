@@ -15,7 +15,7 @@ var total=0,count=0
   try {
     const response = await fetch('info13.txt');
     var data = await response.text();
-    data=data.replace('\n'),"*"
+    data=data.replace('\n',"*")
     lines = data.split('**');
   } catch (error) {
     alert('Error reading file:'+error);
