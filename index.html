@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc14.5mono</h1>
+    <h1>aoc14.6mono</h1>
     <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -9,7 +9,7 @@ var ct1 = c1.getContext("2d");
 var i   
  
 var lines = []
-    var grid=[]
+    var grid=[],len=0
 var total=0,count=0
     fileLoad();
     async function fileLoad() {
@@ -29,18 +29,20 @@ var total=0,count=0
  }
 
 function display(){
-    ct1.font="4px Monospace "
+    ct1.font="5px Monospace "
     
     len=lines.length-1
     for (i=0;i<len;i++){
-        spl(i) 
+        grid[i]=lines[i].split("")
     }
-
+spl()
   
 }
 
-function spl(n){
-     ct1.fillText(" ? "+lines[n], 0, 30+5*n) 
+function spl(){
+    for(k=0;k<len;k++){
+     ct1.fillText("> "+grid[n], 0, 30+5*n)
+    }
 }
         
 </script>
