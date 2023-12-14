@@ -1,14 +1,15 @@
 <html>
 <body>
-    <h1>aoc14</h1>
+    <h1>aoc14.1</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
-    ct1.font="monospace 6px"
+    ct1.font="monospace 5px"
 var i   
  
 var lines = []
+    var grid=[][]
 var total=0,count=0
     fileLoad();
     async function fileLoad() {
@@ -21,13 +22,13 @@ var total=0,count=0
     alert('Error reading file:'+error);
   }
  ct1.fillText("Data lines="+lines.length,0,10)
-        
+ ct1.fillText("1234567801234567801234567890,0,20)       
  display()
        
  }
 
 function display(){
-    ct1.font="monospace 4px"
+    ct1.font="courier 4px"
     
     len=lines.length-1
     for (i=0;i<len;i++){
@@ -39,7 +40,7 @@ function display(){
 
 function spl(n){
  
-     ct1.fillText(" ? "+lines[n], 0, 25+8*n)
+     ct1.fillText(" ? "+lines[n], 0, 30+8*n)
     
 
 }
