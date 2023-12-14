@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc14.8</h1>
+    <h1>aoc14.9</h1>
     <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -24,7 +24,7 @@ var total=0,count=0
             ct1.font="8px Courier New"
  ct1.fillText("Data lines="+lines.length,0,10)       
  display()
- setTimeout(shift,1000)
+ setTimeout(shift,500)
  }
 
 function shift(){
@@ -39,10 +39,21 @@ function shift(){
     }
     }
     spl()
-    if(change>0){setTimeout(shift,2000)}
-        else{alert("done") }
+    if(change>0){setTimeout(shift,500)}
+        else{alert("done")
+    counting()}
     }
-        
+  function counting(){
+      var x,y, coun=0
+    for(x=0;x<grid[0].length;x++){
+    for(y=0;y<len;y++){
+        if(grid[y][x]=="O"){
+            coun+=100-y
+        }
+    }
+    }
+      alert(coun)
+  }
 function display(){
     ct1.font="7px Monospace "
     
