@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>aoc14.7</h1>
+    <h1>aoc14.8</h1>
     <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -36,14 +36,15 @@ function shift(){
             grid[y][x]="."
             change++
         }
+    }
+    }
     spl()
     if(change>0){setTimeout(shift,2000)}
-        else{alert("done")
-            }
+        else{alert("done") }
     }
         
 function display(){
-    ct1.font="6px Monospace "
+    ct1.font="7px Monospace "
     
     len=lines.length-1
     for (i=0;i<len;i++){
@@ -56,7 +57,7 @@ spl()
 function spl(){
     ct1.clearRect(0,20,800,800)
     for(k=0;k<len;k++){
-     ct1.fillText("> "+grid[k].join(""), 0, 25+5*k)
+     ct1.fillText(grid[k].join(""), 0, 25+6*k)
     }
 }
         
