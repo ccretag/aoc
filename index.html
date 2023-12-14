@@ -1,11 +1,11 @@
 <html>
 <body>
-    <h1>aoc14.4mono</h1>
+    <h1>aoc14.5mono</h1>
     <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
-    ct1.font="monospace 5px"
+
 var i   
  
 var lines = []
@@ -21,6 +21,7 @@ var total=0,count=0
   } catch (error) {
     alert('Error reading file:'+error);
   }
+            ct1.font="monospace 8px"
  ct1.fillText("Data lines="+lines.length,0,10)
  ct1.fillText("1234567801234567801234567890",0,20)       
  display()
