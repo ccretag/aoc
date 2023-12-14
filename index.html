@@ -1,7 +1,7 @@
 <html>
 <body>
     <h1>aoc14.5mono</h1>
-    <canvas id="Canvas1" width="800" height="500" style="border: 1px solid black;">
+    <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
@@ -21,7 +21,7 @@ var total=0,count=0
   } catch (error) {
     alert('Error reading file:'+error);
   }
-            ct1.font="8px Monospace"
+            ct1.font="8px Courier New"
  ct1.fillText("Data lines="+lines.length,0,10)
  ct1.fillText("1234567801234567801234567890",0,20)       
  display()
@@ -40,10 +40,7 @@ function display(){
 }
 
 function spl(n){
- 
-     ct1.fillText(" ? "+lines[n], 0, 30+8*n)
-    
-
+     ct1.fillText(" ? "+lines[n], 0, 30+5*n) 
 }
         
 </script>
