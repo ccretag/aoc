@@ -1,6 +1,6 @@
 <html>
 <body>
-    <h1>test2</h1>
+    <h1>test3</h1>
     <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
@@ -9,15 +9,14 @@ var ct1 = c1.getContext("2d");
 var number = 0
 ct1.font="14px Monospace"
 
-async function updateNumber() {
+function updateNumber() {
   while (true) {
 
     ct1.clearRect(0, 0, 400, 400);
     ct1.fillText(number, 10, 10);
 
     number++;
-
-    await delay()
+    delay()
   }
 }
 
