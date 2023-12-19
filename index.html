@@ -1,77 +1,27 @@
 <html>
 <body>
-    <h1>aoc14.9</h1>
+    <h1>test1</h1>
     <canvas id="Canvas1" width="800" height="800" style="border: 1px solid black;">
 <script>
 var c1 = document.getElementById("Canvas1");
 var ct1 = c1.getContext("2d");
 
-var i   
- 
-var lines = []
-    var grid=[],len=0
-var total=0,count=0
-    fileLoad();
-    async function fileLoad() {
-  try {
-    const response = await fetch('info14.txt');
-    var data = await response.text();
-   
-    lines = data.split('\n');
-  } catch (error) {
-    alert('Error reading file:'+error);
-  }
-            ct1.font="8px Courier New"
- ct1.fillText("Data lines="+lines.length,0,10)       
- display()
- setTimeout(shift,500)
- }
+var number = 0
+ct1.fontStyle="14px Monospace"
 
-function shift(){
-    var x,y, change=0
-    for(x=0;x<grid[0].length;x++){
-    for(y=1;y<len;y++){
-        if(grid[y][x]=="O" && grid[y-1][x]=="."){
-            grid[y-1][x]="O"
-            grid[y][x]="."
-            change++
-        }
-    }
-    }
-    spl()
-    if(change>0){setTimeout(shift,500)}
-        else{alert("done")
-    counting()}
-    }
-  function counting(){
-      var x,y, coun=0
-    for(x=0;x<grid[0].length;x++){
-    for(y=0;y<len;y++){
-        if(grid[y][x]=="O"){
-            coun+=100-y
-        }
-    }
-    }
-      alert(coun)
+async function updateNumber() {
+  while (true) {
+
+    ct1.clearRect(0, 0, 400, 400);
+    ct1.fillText(number, 10, 10);
+
+    number++;
+
+    await new Promise(resolve => setTimeout(resolve, 1000 / 60)); // 60 frames per second
   }
-function display(){
-    ct1.font="7px Monospace "
-    
-    len=lines.length-1
-    for (i=0;i<len;i++){
-        grid[i]=lines[i].split("")
-    }
-spl()
-  
 }
 
-function spl(){
-    ct1.clearRect(0,20,800,800)
-    for(k=0;k<len;k++){
-     ct1.fillText(grid[k].join(""), 0, 25+6*k)
-    }
-}
-        
+updateNumber();
 </script>
 </body>
 </html>
